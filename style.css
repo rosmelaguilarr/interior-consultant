@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #181719;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    position: relative;
+    padding-bottom: 10rem;
+}
+/* ########## HEADER ########## */
+.header{
+    padding-top: 3.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem ;
+}
+.header a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo{
+    
+    border: thin solid #fff;
+    padding: .5rem;
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    width: max-content;
+}
+.menu{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 5rem;
+}
+
+.menu__link{
+    padding: .5rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    position: relative;
+}
+.menu__link::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+.menu__link:hover::after{
+    display: block;
+}
+.menu__link--active{
+    font-weight: 700;
+}
+.menu__link.menu__link--active::after{
+    display: block;
+}
+/* ########## MENU HAMBURGUER ########## */
+.menu-hamburguer{
+    display: none;
+    cursor: pointer;
+}
+/* ########## MAIN ########## */
+.main{
+    padding-top: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copy{
+   width: 35%;
+}
+.copy__title{
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.copy__text{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.copy__link{
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.copy__link span{
+    color: #fff;
+    font-size: 25px;
+    margin-left: .8rem;
+}
+.cover{
+    width: 55%;
+    position: relative;
+}
+.cover__picture{
+    width: 100%;
+    margin: 0;
+}
+.cover__img{
+    width: 100%;
+    display: block;
+}
+.card{
+    width: 60%;
+    min-width: 260px;
+    background-color: #181719;
+    padding: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+    transform: translateY(55%);
+}
+.card__head{
+    display: flex;
+    align-items: center;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.card__name{
+    font-size: 0.875rem; 
+    font-weight: 500;
+    margin: 0;
+}
+.career{
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #828282;
+    padding-top: 0.5rem;
+}
+.card__description{
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+/* ########## FOOTER ########## */
+.footer{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+}
+.author, .author a{
+    color: #BDBDBD;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 1.3rem;
+}
+/* ########## MEDIA QUERIES ########## */
+
+@media screen and (max-width: 992px){
+    .menu__link{
+        font-size: 0.875rem;
+    }
+    .copy__title{
+        font-size: 2.25rem;    
+    }
+    .copy__text{
+        font-size: 0.875rem;
+    }
+    .copy__link{
+        font-size: 0.875rem;
+    }
+    .avatar{
+        margin-right: 1rem;
+    }
+    .card__description{
+        font-size: 1.125rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .header{
+        gap: 1rem ;
+    }
+    .menu{
+        gap: 2.5rem;
+    }
+    .main{
+        flex-direction: column;
+        padding-top: 50px;
+    }
+    .copy{
+        width: initial;
+        margin-bottom: 2rem;
+    }
+    .copy__title{
+        margin-bottom: 1.5rem;
+    }
+    .copy__link{
+        margin-top: 0;
+    }
+    .cover{
+        width: 70%;
+    }
+    .avatar{
+        width: 40px;
+        height: 40px;
+    }
+    .card__name{
+        font-size: 0.75rem; 
+    }
+    .career{
+        font-size: 0.625rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .container{
+        width: 95%;
+    }
+    .header{
+        padding: 25px;
+    }
+    .nav{
+        justify-content: center;
+    }
+    .cover{
+        width: 100%;
+    }
+    .main{
+        padding-top: 15px;
+    }
+    .card{
+        padding-top: .8rem;
+        transform: translateY(65%);
+    }
+}
+@media screen and (max-width: 425px){
+    .card{
+        right: 20px;
+    }
+    .menu{
+        gap: 1.5rem;
+    }
+}
+@media screen and (max-width: 375px){
+    .header{
+        padding: 25px 0;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        background-color: #181719;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 900;
+        overflow-y: auto;
+        transition: left .3s ease-in-out;
+    }
+    .menu__link{
+        padding: .5rem 0 .4rem;
+        font-size: 18px;
+    }
+    .menu-hamburguer{
+        display: block;
+        z-index: 1000;
+    }
+    .menu--visible{
+        left: 0;
+    }
+    
+}
+
