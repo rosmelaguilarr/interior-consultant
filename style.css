@@ -24,7 +24,6 @@ body{
 .header{
     padding-top: 3.125rem;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: .5rem ;
@@ -49,13 +48,11 @@ body{
     width: max-content;
 }
 .menu{
+    width: 60%;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 5rem;
+    justify-content: space-between;
 }
 
 .menu__link{
@@ -216,7 +213,7 @@ body{
         gap: 1rem ;
     }
     .menu{
-        gap: 2.5rem;
+        width: 85%;
     }
     .main{
         flex-direction: column;
@@ -251,10 +248,7 @@ body{
         width: 95%;
     }
     .header{
-        padding: 25px;
-    }
-    .nav{
-        justify-content: center;
+        padding: 25px 0;
     }
     .cover{
         width: 100%;
@@ -265,25 +259,13 @@ body{
     .card{
         padding-top: .8rem;
         transform: translateY(65%);
-    }
-}
-@media screen and (max-width: 425px){
-    .card{
         right: 20px;
-    }
-    .menu{
-        gap: 1.5rem;
-    }
-}
-@media screen and (max-width: 375px){
-    .header{
-        padding: 25px 0;
     }
     .menu{
         flex-direction: column;
         align-items: center;
-        flex-wrap: nowrap;
-        gap: 2rem;
+        justify-content: center;
+        gap: 3rem;
         background-color: #181719;
         margin: 0;
         position: fixed;
@@ -293,10 +275,11 @@ body{
         height: 100%;
         z-index: 900;
         overflow-y: auto;
+        scrollbar-width: none;
         transition: left .3s ease-in-out;
     }
     .menu__link{
-        padding: .5rem 0 .4rem;
+        padding: 1rem 0 .4rem;
         font-size: 18px;
     }
     .menu-hamburguer{
@@ -306,6 +289,4 @@ body{
     .menu--visible{
         left: 0;
     }
-    
 }
-
